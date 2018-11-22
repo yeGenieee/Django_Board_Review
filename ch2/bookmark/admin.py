@@ -1,5 +1,5 @@
 from django.contrib import admin
-from bookmark.models import Bookmark
+from .models import Bookmark
 
 # Register your models here.
 # models.py에서 정의한 테이블을 Admin 사이트에 보이도록 등록해야함
