@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bookmark.apps.BookmarkConfig' # 앱 설정 클래스 (해당 애플리케이션에 대한 메타 정보를 저장하기 위한 클래스 - django.apps-AppConfig 클래스를 상속받아 작성함)
+    'bookmark.apps.BookmarkConfig', # 앱 설정 클래스 (해당 애플리케이션에 대한 메타 정보를 저장하기 위한 클래스 - django.apps-AppConfig 클래스를 상속받아 작성함)
+    'blog.apps.BlogConfig', # 앱 설정 클래스
 ]
 
 MIDDLEWARE = [

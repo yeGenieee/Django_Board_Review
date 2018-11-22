@@ -24,4 +24,7 @@ urlpatterns = [
     # ex) /bookmark/
     path('bookmark/', include('bookmark.urls')),
 
+    # ex) /blog/
+    path('blog/', include('blog.urls')),
+
 ]
