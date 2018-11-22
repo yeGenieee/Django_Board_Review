@@ -20,12 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '=77u-t@ucva%vthqw&@fx3p7!!*l#68^aa8o8ih8rdpd0peoui'
+SECRET_KEY = '_uxptaua9j2)fa7r@yt=ll23@&7p5_(a^dx*pwp3anu^d(h$3='
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','127.0.0.1']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bookmark.apps.BookmarkConfig' # 앱 설정 클래스 (해당 애플리케이션에 대한 메타 정보를 저장하기 위한 클래스 - django.apps-AppConfig 클래스를 상속받아 작성함)
 ]
 
 MIDDLEWARE = [
@@ -76,11 +77,11 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test_myapp',
-        'USER' : 'root',
-        'PASSWORD' : 'qwer1234',
-        'HOST' : '127.0.0.1',
-        'PORT' : '3306',
+        'NAME' : 'test_myapp', # DB
+        'USER' : 'root', # mysql database 계정
+        'PASSWORD' : 'qwer1234', # 계정 비밀 번호
+        'HOST' : '127.0.0.1', # host ip 주소
+        'PORT' : '3306', # 포트 번호
     }
 }
 
@@ -122,7 +123,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATICFILES_DIRS=[os.path.join(BASE_DIR, 'static')]
+
+MEDIA_URL='/media/'
+MEDIA_ROOT=os.path.join(BASE_DIR, 'media')
